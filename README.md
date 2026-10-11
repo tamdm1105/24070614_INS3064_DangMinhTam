@@ -1,10 +1,16 @@
-# INS3064 — Homework 4: University Database (MySQL)
+# INS3064 — Homework 4 & 5: University Database (MySQL)
 
 Student: Dang Minh Tam · ID: 24070614
 
 A MySQL database for a university course registration system: 6 tables, constraints and realistic sample data (Vietnamese names).
 
-## Files
+## Homework 5: SQL queries
+
+`university_queries.sql` holds 10 queries (SELECT, WHERE, AND/OR, ORDER BY, LIMIT, LIKE, aggregates, GROUP BY + HAVING, 2-table JOIN, 4-table JOIN) against `university_db`, each with a description and expected output. `homework05.zip` is the LMS upload.
+
+**phpMyAdmin:** first import `university_db.sql` (below), select `university_db`, open the **SQL** tab and paste `university_queries.sql`.
+
+## Files (Homework 4)
 
 | File | Purpose |
 |---|---|
