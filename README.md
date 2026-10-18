@@ -1,8 +1,21 @@
-# INS3064 — Homework 4 & 5: University Database (MySQL)
+# INS3064 — Homework (MySQL)
 
 Student: Dang Minh Tam · ID: 24070614
 
 A MySQL database for a university course registration system: 6 tables, constraints and realistic sample data (Vietnamese names).
+
+## Homework 6: Online Bookstore database design
+
+| File | Purpose |
+|---|---|
+| `bookstore_erd.md` | Text ERD: entities, PK/FK, cardinality, 3NF notes. |
+| `bookstore_db.sql` | Creates `bookstore_db`: 10 InnoDB/utf8mb4 tables, PK/FK (explicit `ON DELETE`/`ON UPDATE`), `NOT NULL`, `UNIQUE`, `CHECK`, `DEFAULT`, sample data and a 3NF comment block. Safe to re-run. |
+| `homework06.zip` | `bookstore_erd.md` + `bookstore_db.sql`, for the LMS upload. |
+| `tests/test-bookstore-db.py` | 9 acceptance tests against a real MySQL server. |
+
+Sample data: 9 books, 8 authors, 6 publishers, 7 categories (2 sub-genres), 6 customers (one without orders), 9 orders (one cancelled), 16 order items, 10 reviews.
+
+**phpMyAdmin:** SQL tab (no database selected) → import `bookstore_db.sql` → **Go**. **CLI:** `mysql -u root -p < bookstore_db.sql`. Test: `python3 tests/test-bookstore-db.py` (same container as below).
 
 ## Homework 5: SQL queries
 
