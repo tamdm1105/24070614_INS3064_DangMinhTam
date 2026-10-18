@@ -4,6 +4,23 @@ Student: Dang Minh Tam · ID: 24070614
 
 A MySQL database for a university course registration system: 6 tables, constraints and realistic sample data (Vietnamese names).
 
+## Homework 7: Advanced SQL (Online Bookstore)
+
+`bookstore_queries.sql` holds 10 queries against `bookstore_db` (Homework 6), each with a description and an expected-output block:
+
+| # | Technique | Returns |
+|---|---|---|
+| 1–3 | JOIN | books ↔ authors; order lines; books + publisher + categories (5 tables, parent genre) |
+| 4–5 | GROUP BY | sales by book; customer summary incl. customers without orders (LEFT JOIN) |
+| 6–7 | Subquery | books above average price; best-selling author(s), ties kept (no `LIMIT`) |
+| 8 | HAVING | customers with more than 2 reviews rated ≥ 3 |
+| 9 | View | `v_book_sales_summary` (0 / NULL when no sales or reviews) |
+| 10 | Combined | monthly revenue for the current year, all 12 months, running total |
+
+Revenue excludes `cancelled` orders. `homework07.zip` is the LMS upload. Test: `python3 tests/test-bookstore-queries.py` (checks every query returns its documented output).
+
+**phpMyAdmin:** import `bookstore_db.sql` first, then open the **SQL** tab and paste `bookstore_queries.sql`.
+
 ## Homework 6: Online Bookstore database design
 
 | File | Purpose |
